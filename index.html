@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bushra</h1>
+        <p>Contact: arazzakbushra@gmail.com | Phone: (123) 456-7890</p>
+        <img src="bushra.jpg" alt="Profile Picture" class="profile-pic">
+    </header>
+    <main>
+        <section id="education">
+            <h2>Education</h2>
+            <p>Sir Syed University Of Engineering and Technology BSCE (In Process)</p>
+            <p>HSC Shaheed-e-Millat Government College of Women</p>
+            <p>SSC New Generation High School</p>
+        </section>
+        <section id="skills" class="hidden">
+            <h2>Skills</h2>
+            <p>Html</p>
+            <p>CSS</p>
+            <p>Typescript</p>
+            <p>Digital Marketing</p>
+            <p>Python</p>
+            <p>C++</p>
+        </section>
+        <section id="work-experience">
+            <h2>Work Experience</h2>
+            <p>Jamia Noman School (2-Years)</p>
+            <p>Tution (5-years)</p>
+        </section>
+    </main>
+    <footer>
+        <button id="toggle-skills">Show Skills Section</button>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleSkillsButton = document.getElementById('toggle-skills');
+            const skillsSection = document.getElementById('skills');
+
+            toggleSkillsButton.addEventListener('click', () => {
+                if (skillsSection.style.display === 'none' || skillsSection.style.display === '') {
+                    skillsSection.style.display = 'block';
+                    toggleSkillsButton.textContent = 'Hide Skills Section';
+                } else {
+                    skillsSection.style.display = 'none';
+                    toggleSkillsButton.textContent = 'Show Skills Section';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
